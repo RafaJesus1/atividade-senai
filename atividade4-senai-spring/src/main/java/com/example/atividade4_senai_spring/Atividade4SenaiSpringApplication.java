@@ -3,8 +3,6 @@ package com.example.atividade4_senai_spring;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.Scanner;
-
 @SpringBootApplication
 public class Atividade4SenaiSpringApplication {
 
@@ -12,8 +10,22 @@ public class Atividade4SenaiSpringApplication {
 
 		SpringApplication.run(Atividade4SenaiSpringApplication.class, args);
 
-		HelloWorld saudacoes = new HelloWorld();
-		saudacoes.sayHello();
+		Usuario funcionario = new Usuario();
+		Menu menu = new Menu();
+
+		funcionario.setNome("Rafael");
+
+		System.out.println("Bem-vindo ao Sistema de Consultas, " + funcionario.getNome() + menu.printMenu());
+
+		while (true) {
+			menu.cadastrarPaciente();
+			menu.listarPacientes();
+		}
+
+
+
+
+
 	}
 
 }
